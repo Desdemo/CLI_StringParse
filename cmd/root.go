@@ -5,15 +5,16 @@ import (
 )
 
 var rootCmd = &cobra.Command{
-	Use: "",
+	Use:   "",
 	Short: "",
-	Long: "",
+	Long:  "",
 }
 
-func Execute() error  {
+func Execute() error {
 	return rootCmd.Execute()
 }
 
-func init()  {
+func init() {
 	rootCmd.AddCommand(wordCmd)
+	rootCmd.AddCommand(timeCmd)
 }
